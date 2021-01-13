@@ -1,0 +1,128 @@
+
+
+class Demo{
+
+
+	int f1(char a){
+	
+	
+	System.out.println(" char parameter method");
+	
+		return 0 ;
+	
+	}
+	
+	
+	
+	/*String f1(char b){
+	
+	
+		System.out.println(" char parameter method");
+		
+		return null;
+	}
+	
+	method f1(char) is already defined in class Demo
+	String f1(char b){
+
+	you can not overload method using diffrent return types if you use same signature*/
+	
+	
+	/*void f1(int a, double b){  error: reference to f1 is ambiguous
+
+	
+	System.out.println(" method void f1(int a, double b) ");
+	
+	
+	}*/
+	
+	
+	void f1(double b , int a){
+	
+	
+	System.out.println("Method  void f1(double b , int a)   ");
+	
+	}
+	
+	
+	
+	
+	void f1(String a, double b){  
+
+	
+	System.out.println(" method void f1(String a, double b) ");
+	
+	
+	}
+	
+	
+	void  f1(int a){
+	
+	
+	System.out.println("Method  void  f1(int a) ");
+	
+	
+	}
+	
+	void f1(String str){
+	
+	
+		System.out.println("Method void f1(String str)");
+	
+	
+	}
+	
+	
+	void f1(Object str){
+	
+	
+		System.out.println("Method void f1(Object str)");
+	
+	
+	}
+
+
+
+
+
+	public static void main(String args[]){
+	
+	
+	
+		Demo d = new Demo();
+		
+		//d.f1();
+		
+		d.f1(20);
+		
+		d.f1(null);  // string method will call
+		
+		d.f1('a'); // auto datatype promot in int
+		
+		d.f1(12.5,12);
+		
+		d.f1('a',12);
+		
+		d.f1("a",23);
+		
+		d.f1(12,15); // auto datatype promot int to double
+		
+		main(10);
+		
+	
+	
+	
+	}
+	
+	
+	public static void main(int b){
+	
+	System.out.println("You can overload the main method 👍️");
+	
+	
+	}
+
+
+
+
+}
